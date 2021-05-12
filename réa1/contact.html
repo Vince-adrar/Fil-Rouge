@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./filrouge.css">
+    <link rel="icon" href="./images/icon.png">
+    <title>Jamm♪n' | Contact</title>
+</head>
+<body>
+    <header>          
+        <h1><a href="#top"><img src="./images/icon.png" alt="logo"></a></h1>    
+        <div class="multi-button">
+            <a href="./main.html"><input type="button" value="Accueil" /></a>
+            <a href="./connexion.html"><input type="button" value="Connexion" /></a>
+            <a href="./contact.html"><input type="button" value="Contact" /></a>  
+            <a href="./erreur.html"><input type="button" value="Test" /></a>  
+        </div>
+    </header>
+    <!-- "action=" provisoire en attentant .php-->
+    <form method="POST" action="./erreur.html"> 
+        <h2>Vous avez des questions? Contactez-nous!</h2>
+        <label for="pseudo">Pseudo</label> <br />
+        <input type="text" name="pseudo" placeholder="Votre pseudo" maxlength="30" minlength="2" id="pseudo" /><br />
+        <label for="mail">E-mail</label> <br />
+        <input type="email" name="mail" placeholder="Votre adresse mail" id="email"><br />
+        <label for="question">Message</label> <br />
+        <textarea placeholder="Laissez-nous votre message / question ici" name="question" id="question" cols="50" rows="10"></textarea><br />
+        <a href="./erreur.html"><input type="submit" value="Envoyer"></a>
+    </form>
+    <footer>
+        <p>Mentions légales</p>        
+    </footer>
+</body>
+</html>

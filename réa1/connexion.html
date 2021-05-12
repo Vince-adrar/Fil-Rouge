@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./filrouge.css">
+    <link rel="icon" href="./images/icon.png">
+    <title>Jamm♪n' | Connexion</title>
+</head>
+<body>
+    <header>          
+        <h1><a href="#top"><img src="./images/icon.png" alt="logo"></a></h1>    
+        <div class="multi-button">
+            <a href="./main.html"><input type="button" value="Accueil" /></a>
+            <a href="./connexion.html"><input type="button" value="Connexion" /></a>
+            <a href="./contact.html"><input type="button" value="Contact" /></a>  
+            <a href="./erreur.html"><input type="button" value="Test" /></a>
+        </div>
+    </header>
+    <main>
+        <!-- "action=" provisoire en attentant .php-->
+        <form action="./erreur.html" method="POST">
+            <label for="pseudo">Pseudo</label> <br />
+            <input type="text" name="pseudo" maxlength="30" minlength="2" id="pseudo" /><br />
+            <label for="mdp">Mot de passe (8 caractères minimum)</label><br />
+            <input type="password" minlength="8" id="mdp" required><br />
+            <a href="./erreur.html"><input type="submit" value="Envoyer"></a>
+            <p>Vous n'avez pas de comptes? Cliquez <a href=erreur.html>ici</a>!</p>
+        </form>
+    </main>
+    <footer>
+        <p>Mentions légales</p>        
+    </footer>
+</body>
+</html>
