@@ -2,7 +2,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 10% 87% 3%;
+    height: 100vh;
     margin: 0;
     background-image: url(./images/bg.jpg) ;
     background-attachment: fixed;
@@ -35,30 +35,28 @@ header {
     grid-template-columns: 1fr 5fr 1fr ;
     grid-template-rows: 1fr 1fr ;
     display: grid;
-    background-color: #D26800;
-    padding-bottom: 0vh;
     color: black;
     position: sticky;
     top: 0px;
     z-index: 1000;
-    animation: anim_header 0.5s;
-    max-height: 200px;
-    min-height: 200px;
+    animation: anim_header 0.5s; 
     background: radial-gradient(#D26800, black);
 }
 
-h1 {
-    text-align: center;
+header a {
+    margin: 5px auto 0 auto;
     grid-column: 2;
-    grid-row: 1;
-    
+    display: flex;
+    justify-content: center;
 }
-h1 img{
-    max-width: 100px;
-    max-height: 100px;
+
+header a img {
+    width: 60%;
 }
-img:first-of-type  {
+
+article img:first-of-type  {
 border-radius: 5%;
+margin: auto;
 }
 
 .multi-button {
@@ -81,13 +79,15 @@ border-radius: 5%;
     transition: 0.5s;
 }
 
+.multi-button a {
+    text-decoration: none;
+}
 
 
 .multi-button:hover input:hover {
     background-color: black;
     color: #D26800;
     width: 15vw;
-
 }
 
 /*Content*/
@@ -104,7 +104,6 @@ article, form{
     border-radius:3em ;
     margin-top: 5%;
     margin-bottom: 5%;
-    margin-left: 5%;
     background-size: cover;
 }
 
@@ -121,7 +120,7 @@ ul {
     }
 }
 
- /*CSS contact start*/
+ /*CSS contact / connexion start*/
 
 form {
     grid-column: 2;
@@ -141,7 +140,7 @@ form input, form label, form textarea{
     
 }
 
-/*CSS contact end*/
+/*CSS contact / connexion end*/
 
 #erreur{
     grid-column: 2;
@@ -159,13 +158,12 @@ nav {
     border-radius: 3em;
     margin-bottom: 100em;
     margin-top: 20em;
+    margin-left: 5px;
     grid-column: 1;
     grid-row: 2;
     position: fixed;
     padding-right: 3em;
     animation: anim_nav_bar 1s;
-    
-
 }
 div:target {
     padding-top: 12em; 
@@ -186,5 +184,32 @@ p, h1, h2, h3, nav{
     min-height: 50px;
     background: radial-gradient(#D26800, black);
     margin-top: 5%;
+    
  }
 
+ /* 1395px responsive*/
+ @media screen and (max-width: 1770px){
+    main {
+        grid-row: 3;
+    }
+    footer {
+        grid-row: 4;
+    }
+
+    nav {
+        grid-column: 2;
+        animation: none;
+        position: initial;
+        grid-row: 2;
+        margin: 20px auto 0 auto;
+        
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li a {
+        padding: 0 4px;
+
+    }
+ }
